@@ -1,0 +1,2 @@
+ofxBasicSoundPlayer
+ofxGui
