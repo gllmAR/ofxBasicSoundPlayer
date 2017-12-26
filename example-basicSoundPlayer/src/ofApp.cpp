@@ -52,7 +52,7 @@ void ofApp::setup(){
         soundStream.setup(settings);
         
     
-        player.load("sounds/beat.wav");
+        player.load("sounds/lasers.wav");
         
 
     
