@@ -29,6 +29,9 @@ ofxBasicSoundPlayer::ofxBasicSoundPlayer() {
 	volumesRight.resize(1,1);
 	pan = 0;
 	maxSounds = maxSoundsPerPlayer;
+    loop_selection=true;
+    loop_in=.3;
+    loop_out=.5;
 }
 
 ofxBasicSoundPlayer::~ofxBasicSoundPlayer() {
@@ -240,6 +243,21 @@ void ofxBasicSoundPlayer::updatePositions(int nFrames){
 	if(!loop && positions.size()==1 && positions[0]==buffer.getNumFrames()){
 		bIsPlaying = false;
 	}
+    
+    //loop to selection playing front?
+    if(loop_selection)
+    {
+    float now_position = getPosition();
+       if (now_position>loop_out)
+       {
+        setPosition(loop_in);
+       }
+       else if (now_position<loop_in)
+       {
+           setPosition(loop_out);
+       }
+    }
+       
 }
 
 void ofxBasicSoundPlayer::audioOut(ofSoundBuffer& outputBuffer){
@@ -303,3 +321,20 @@ void ofxBasicSoundPlayer::setMaxSoundsPerPlayer(int max){
 void ofxBasicSoundPlayer::setMaxSounds(int max){
 	maxSounds = max;
 }
+
+void ofxBasicSoundPlayer::set_loop_selection(bool b)
+{
+    loop_selection=b;
+}
+
+void ofxBasicSoundPlayer::set_loop_in(float f)
+{
+    loop_in=f;
+}
+
+void ofxBasicSoundPlayer::set_loop_out(float f)
+{
+    loop_out=f;
+}
+
+

@@ -45,6 +45,14 @@ public:
 	bool getIsLooping() const;
 	unsigned long getDurationMS();
 
+    //looping selection function
+    void set_loop_selection(bool b);
+    bool loop_selection;
+    void set_loop_in(float f);
+    float loop_in=0;
+    void set_loop_out(float f);
+    float loop_out=1;
+    
 	ofSoundBuffer & getCurrentBuffer();
 
 	static void setMaxSoundsTotal(int max);
