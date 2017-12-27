@@ -1,0 +1,7 @@
+*.app
+.DS_Store
+*.o
+*.d
+*.xcodeproj
+openFrameworks-Info.plist
+Project.xcconfig
