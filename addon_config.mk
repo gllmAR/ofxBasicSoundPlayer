@@ -86,7 +86,11 @@ vs:
 	ADDON_LIBS += MFPlat.lib
 	ADDON_LIBS += mfuuid.lib
 linuxarmv6l:
+    ADDON_INCLUDES_EXCLUDE += libs/libaudiodecoder/%
+    ADDON_SOURCES_EXCLUDE += libs/libaudiodecoder/%
 linuxarmv7l:
+    ADDON_INCLUDES_EXCLUDE += libs/libaudiodecoder/%
+    ADDON_SOURCES_EXCLUDE += libs/libaudiodecoder/%
 android/armeabi:	
 android/armeabi-v7a:	
 osx:
