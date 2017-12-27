@@ -29,9 +29,9 @@ ofxBasicSoundPlayer::ofxBasicSoundPlayer() {
 	volumesRight.resize(1,1);
 	pan = 0;
 	maxSounds = maxSoundsPerPlayer;
-    loop_selection=true;
-    loop_in=.3;
-    loop_out=.5;
+    loop_selection=false;
+    loop_in=0;
+    loop_out=1;
 }
 
 ofxBasicSoundPlayer::~ofxBasicSoundPlayer() {
