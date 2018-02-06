@@ -4,7 +4,7 @@
  *  Created on: 25/07/2012
  *      Author: arturo
  */
-
+#include "ofMathConstants.h"
 #include "ofxSoundFile.h"
 #include "ofLog.h"
 #include "ofUtils.h"
@@ -151,7 +151,9 @@ bool ofxSoundFile::save(string path, const ofSoundBuffer &buff){
 	short writeBuff[WRITE_BUFF_SIZE];
 	int pos = 0;
 	while(pos<buff.size()) {
-		int len = MIN(WRITE_BUFF_SIZE, buff.size()-pos);
+        int len = MIN(WRITE_BUFF_SIZE, buff.size()-pos);
+ //       int len = std::min(WRITE_BUFF_SIZE, buff.size()-pos);
+
 		for(int i = 0; i < len; i++) {
 			writeBuff[i] = (int)(buff[pos]*32767.f);
 			pos++;

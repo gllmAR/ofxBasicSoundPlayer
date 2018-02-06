@@ -4,7 +4,7 @@
  *  Created on: 25/07/2012
  *      Author: arturo
  */
-
+#include "ofLog.h"
 #include "ofxBasicSoundPlayer.h"
 #include "ofSoundUtils.h"
 #include "ofSoundStream.h"

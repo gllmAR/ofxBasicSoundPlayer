@@ -6,8 +6,7 @@
  */
 
 #pragma once
-
-#include "ofBaseSoundPlayer.h"
+#include "ofSoundPlayer.h"
 #include "ofBaseTypes.h"
 #include "ofConstants.h"
 #include "ofSoundBuffer.h"
